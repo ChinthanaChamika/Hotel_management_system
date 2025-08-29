@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 
 const HotelCard = ({room,index}) => {
     return (
-       <Link to = {'/rooms/' + room.room_id} onClick={()=> scrollTo(0,0)} key={room.room_id}
+       <Link to = {'/rooms/'+ room._id} onClick={()=> scrollTo(0,0)} key={room.room_id}
        className="relative max-w-70 w-full rounded-xl overflow-hidden bg-white text-gray-500/90 shadow-[0px_4px_4px_rgba(0,0,0,0.05)]">
         <img src = {room.images[0]} alt="" />
 
@@ -21,9 +21,9 @@ const HotelCard = ({room,index}) => {
                 <img src={assets.locationIcon} alt="location-icon"/>
                 <span>{room.hotel.address}</span> 
             </div>
-            <div className="flex items-center justify-betweenmt-4">
-                <p><span className="'text-xl text-gray-800">${room.pricePerNight}</span>/night</p>
-                <button className='ml-18 px-4 py-2 text-sm font-medium border border-gray-300 rounded hover:bg-gray-50 transition-all cursor-pointer'>Book Now</button>
+            <div className="flex items-center justify-between mt-4">
+                <p><span className="text-xl text-gray-800">${room.pricePerNight}</span>/night</p>
+                <button className='ml-10 px-4 py-2 text-sm font-medium border border-gray-300 rounded hover:bg-gray-50 transition-all cursor-pointer'>Book Now</button>
             </div>
         </div>
        </Link>
