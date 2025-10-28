@@ -11,7 +11,7 @@ const app = express()
 app.use(cors()) 
 
 
-//Middleware
+//Middlewares
 app.use(express.json())
 app.use(clerkMiddleware())
 
